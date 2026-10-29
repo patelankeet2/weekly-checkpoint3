@@ -1,0 +1,17 @@
+/* Global styles for the whole page */
+
+/* Include padding and borders in element sizes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Green page background like the sample output */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: lightgreen;
+  color: #000000;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}

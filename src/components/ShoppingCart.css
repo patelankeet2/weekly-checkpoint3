@@ -1,0 +1,179 @@
+/* Styles for the ShoppingCart component */
+
+/* Buttons and drop downs use the same font as the page */
+.cart-page button,
+.cart-page select {
+  font-family: inherit;
+}
+
+/* Full page area behind the cart */
+.cart-page {
+  min-height: 100vh;
+  padding: 40px 16px;
+  background: linear-gradient(180deg, #eef7ee 0%, #f7faf7 100%);
+  color: #1f2a1f;
+}
+
+/* Page heading */
+.cart-header {
+  max-width: 960px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.cart-header h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  color: #1b5e20;
+}
+
+.cart-header p {
+  margin: 0;
+  color: #5f6b5f;
+}
+
+/* Two columns on wide screens: items on the left, summary on the right */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* White card used for both panels */
+.card {
+  background: #ffffff;
+  border: 1px solid #dfe5df;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+}
+
+/* One row for each item: name, price and quantity */
+.item-row {
+  display: grid;
+  grid-template-columns: 1fr 110px 70px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin-bottom: 6px;
+}
+
+/* Highlight a row when its item is ticked */
+.item-row.is-selected {
+  background: #e8f5e9;
+  border-color: #c8e6c9;
+}
+
+/* Column headings above the item rows */
+.item-heading {
+  padding: 0 12px 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #dfe5df;
+  border-radius: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5f6b5f;
+}
+
+/* Checkbox and item name */
+.item-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.item-name input {
+  width: 18px;
+  height: 18px;
+  accent-color: #2e7d32;
+  cursor: pointer;
+}
+
+.item-price {
+  color: #5f6b5f;
+}
+
+/* Quantity drop down */
+.item-row select {
+  padding: 6px 8px;
+  font-size: 0.95rem;
+  border: 1px solid #dfe5df;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Display Total Cost button */
+.display-button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2e7d32;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.display-button:hover {
+  background: #1b5e20;
+}
+
+/* Summary card text when nothing is shown yet */
+.summary-hint {
+  margin: 0;
+  color: #5f6b5f;
+}
+
+/* List of selected items */
+.summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.summary-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #dfe5df;
+}
+
+/* Total cost row */
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #e8f5e9;
+  font-weight: 600;
+}
+
+.summary-amount {
+  font-size: 1.3rem;
+  color: #1b5e20;
+}
+
+/* Stack the two cards on small screens */
+@media (max-width: 760px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+}
